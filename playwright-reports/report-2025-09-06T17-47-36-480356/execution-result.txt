@@ -1,0 +1,18 @@
+### Result
+False
+
+### Ran Playwright code
+await page.goto('https://google.com');
+await page.locator('input[name='q']').fill('wireless headphones');
+await page.locator('input[type='submit']').click();
+await page.locator('div#search').wait_for(state='visible');
+
+### Page state
+URL: https://www.google.com/?zx=1757161058568&no_sw_cr=1
+Title: Google
+Snapshot: Page snapshot captured
+
+### Artifacts
+screenshot: playwright-reports/report-2025-09-06T17-47-36-480356/artifacts/screenshot-001.png
+trace: playwright-reports/report-2025-09-06T17-47-36-480356/artifacts/trace-001.zip
+screenshot_final: playwright-reports/report-2025-09-06T17-47-36-480356/artifacts/screenshot-final.png

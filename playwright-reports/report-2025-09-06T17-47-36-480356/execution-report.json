@@ -1,0 +1,46 @@
+{
+  "scenario": {
+    "name": "Search for Wireless Headphones on Google",
+    "description": "This test verifies the ability to navigate to Google and search for wireless headphones.",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://google.com"
+      },
+      {
+        "action": "fill",
+        "selector": "input[name='q']",
+        "value": "wireless headphones"
+      },
+      {
+        "action": "click",
+        "selector": "input[type='submit']"
+      },
+      {
+        "action": "expect",
+        "selector": "div#search",
+        "condition": "toBeVisible"
+      }
+    ]
+  },
+  "execution": {
+    "status": "failed",
+    "executionTime": "2025-09-06T17:48:21.774415",
+    "totalSteps": 4,
+    "executedCode": "await page.goto('https://google.com');\nawait page.locator('input[name='q']').fill('wireless headphones');\nawait page.locator('input[type='submit']').click();\nawait page.locator('div#search').wait_for(state='visible');\n",
+    "pageState": {
+      "url": "https://www.google.com/?zx=1757161058568&no_sw_cr=1",
+      "title": "Google",
+      "snapshot": "Page snapshot captured"
+    }
+  },
+  "files": {
+    "executionResult": "playwright-reports/report-2025-09-06T17-47-36-480356/execution-result.txt",
+    "artifacts": {
+      "screenshot": "playwright-reports/report-2025-09-06T17-47-36-480356/artifacts/screenshot-001.png",
+      "trace": "playwright-reports/report-2025-09-06T17-47-36-480356/artifacts/trace-001.zip",
+      "screenshot_final": "playwright-reports/report-2025-09-06T17-47-36-480356/artifacts/screenshot-final.png"
+    },
+    "reportDir": "playwright-reports/report-2025-09-06T17-47-36-480356"
+  }
+}
